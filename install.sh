@@ -14,6 +14,7 @@ NC='\033[0m'
 echo -e "${CYAN}======================================================${NC}"
 echo -e "${GREEN}  CÀI ĐẶT FONT TIẾNG VIỆT CHO QIDI PLUS 5 (BẢN NỘI ĐỊA)  ${NC}"
 echo -e "${YELLOW}  (Lưu ý: Chưa thử nghiệm đối với bản Quốc tế)        ${NC}"
+echo -e "${CYAN}  Tác giả: TÔN NGỘ ĐỘC | https://hawklabs.vn          ${NC}"
 echo -e "${CYAN}======================================================${NC}"
 
 TARGET_BIN="/home/qidi/QIDI_Client/bin/qidiclient"
@@ -87,8 +88,9 @@ curl -s "https://abacus.jasoncameron.dev/hit/tonngodoc-qidi-plus5-vietnamese/ins
 
 echo -e "${GREEN}======================================================${NC}"
 echo -e "${GREEN}   CÀI ĐẶT THÀNH CÔNG! MÀN HÌNH ĐÃ SẴN SÀNG TIẾNG VIỆT ${NC}"
-echo -e "${CYAN}   - Thiết bị: QIDI Plus 5${NC}"
+echo -e "${CYAN}   - Thiết bị: QIDI Plus 5 (Bản Nội địa)${NC}"
 echo -e "${CYAN}   - Font chữ: Ubuntu Mono Typography (Khử răng cưa 4-bpp)${NC}"
+echo -e "${CYAN}   - Tác giả: TÔN NGỘ ĐỘC | https://hawklabs.vn${NC}"
 echo -e "${CYAN}   - Bản sao lưu gốc an toàn: $BACKUP_BIN${NC}"
 echo -e "${CYAN}   - Khôi phục gốc bất cứ lúc nào: bash /home/qidi/uninstall_vietnamese.sh${NC}"
 echo -e "${GREEN}======================================================${NC}"
