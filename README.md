@@ -16,6 +16,7 @@ Gói nâng cấp giao diện màn hình cảm ứng QIDI Client với bộ font 
 > - **Dành cho:** Máy in **QIDI Plus 5 - Bản Nội địa** (Chưa thử nghiệm với bản Quốc tế).
 > - **Firmware đã kiểm thử thực tế:** `01.01.01.07` (Kích thước file `qidiclient`: `90,312,400 bytes`, MD5: `dfe9db00a13e40cf08d8a376d09a9aca`).
 > - **Cơ chế bảo vệ an toàn (Safety Pre-check):** Trình cài đặt tự động kiểm tra chữ ký nhị phân và kích thước file trước khi nạp. Nếu phát hiện sai dòng máy (Q1 Pro, Plus 4...) hoặc phiên bản firmware không khớp, script sẽ **tự động từ chối cài đặt** để bảo vệ màn hình an toàn tuyệt đối.
+> - **Cơ chế ngôn ngữ:** Bản vá thay thế trực tiếp vào slot ngôn ngữ Tiếng Nga (`ru_RU`) của nhà sản xuất thành **Tiếng Việt**. Các ngôn ngữ phổ biến khác (Tiếng Anh, Tiếng Trung...) vẫn được giữ nguyên vẹn 100% và có thể chuyển đổi qua lại bình thường trong menu Cài đặt.
 
 ---
 
