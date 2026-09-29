@@ -12,7 +12,8 @@ RED='\033[0;31m'
 NC='\033[0m'
 
 echo -e "${CYAN}======================================================${NC}"
-echo -e "${GREEN}   CÀI ĐẶT FONT TIẾNG VIỆT CHO MÁY IN QIDI PLUS 5     ${NC}"
+echo -e "${GREEN}  CÀI ĐẶT FONT TIẾNG VIỆT CHO QIDI PLUS 5 (BẢN NỘI ĐỊA)  ${NC}"
+echo -e "${YELLOW}  (Lưu ý: Chưa thử nghiệm đối với bản Quốc tế)        ${NC}"
 echo -e "${CYAN}======================================================${NC}"
 
 TARGET_BIN="/home/qidi/QIDI_Client/bin/qidiclient"

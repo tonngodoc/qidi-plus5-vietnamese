@@ -1,21 +1,42 @@
-# Gói Cài Đặt Tiếng Việt & Font Ubuntu Mono Cho Máy In QIDI Plus 5
+# Gói Cài Đặt Tiếng Việt & Font Ubuntu Mono Cho Máy In QIDI Plus 5 (Bản Nội Địa)
 
 <div align="center">
 
 [![Klipper](https://img.shields.io/badge/Klipper-Qidi%20Plus%205-blue.svg)](https://github.com/Klipper3d/klipper)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Tested On](https://img.shields.io/badge/Tested%20on-Qidi%20Plus%205%20(RK3308)-orange.svg)](https://qidi3d.com)
+[![Tested On](https://img.shields.io/badge/Tested%20on-Qidi%20Plus%205%20(Bản%20Nội%20Địa)-orange.svg)](https://qidi3d.com)
 [![Installs](https://img.shields.io/badge/dynamic/json?color=brightgreen&label=Installs&query=value&url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Ftonngodoc-qidi-plus5-vietnamese%2Finstalls&cacheSeconds=60)](https://github.com/tonngodoc/qidi-plus5-vietnamese)
 
 </div>
 
 Gói nâng cấp giao diện màn hình cảm ứng QIDI Client với bộ font **Ubuntu Mono Typography** khử răng cưa mượt mà, hiển thị chuẩn xác 100% các ký tự và dấu thanh tiếng Việt (`ă, â, đ, ê, ô, ơ, ư` và đầy đủ các dấu `sắc, huyền, hỏi, ngã, nặng`).
 
-![Bảng mẫu 50 ký tự tiếng Việt](preview.png)
-
 > [!IMPORTANT]
-> **Khả năng tương thích:** Bản vá nhị phân này được xây dựng và kiểm thử thực tế độc quyền trên máy in **QIDI Plus 5** (Kích thước file `qidiclient`: `90,312,400 bytes`, MD5: `dfe9db00a13e40cf08d8a376d09a9aca`).
-> Tuyệt đối **không tự ý cài đặt chéo** sang các dòng máy khác (như Q1 Pro, Plus 4, X-Max 3...) vì địa chỉ offset bộ nhớ của mỗi bản firmware được biên dịch khác nhau. Trình cài đặt đã tích hợp cơ chế tự kiểm tra chữ ký an toàn (Safety Pre-check) và sẽ tự động từ chối can thiệp nếu không khớp đúng phiên bản của QIDI Plus 5.
+> **Khả năng tương thích:**
+> - **Dành cho:** Máy in **QIDI Plus 5 - Bản Nội địa** (Chưa thử nghiệm với bản Quốc tế).
+> - **Firmware đã kiểm thử thực tế:** `01.01.01.07` (Kích thước file `qidiclient`: `90,312,400 bytes`, MD5: `dfe9db00a13e40cf08d8a376d09a9aca`).
+> - **Cơ chế bảo vệ an toàn (Safety Pre-check):** Trình cài đặt tự động kiểm tra chữ ký nhị phân và kích thước file trước khi nạp. Nếu phát hiện sai dòng máy (Q1 Pro, Plus 4...) hoặc phiên bản firmware không khớp, script sẽ **tự động từ chối cài đặt** để bảo vệ màn hình an toàn tuyệt đối.
+
+---
+
+### 📸 Hình ảnh thực tế trên màn hình máy in QIDI Plus 5 (Bản Nội địa)
+
+<div align="center">
+
+| Giao diện Điều khiển (Tab 2) | Giao diện Quạt & Làm mát |
+| :---: | :---: |
+| <img src="images/real_screen_control.jpg" width="420" alt="Giao diện Điều khiển"> | <img src="images/real_screen_fans.jpg" width="420" alt="Giao diện Quạt"> |
+
+| Menu Cài đặt hệ thống | Trang Thông tin & Tài khoản |
+| :---: | :---: |
+| <img src="images/real_screen_settings.jpg" width="420" alt="Menu Cài đặt"> | <img src="images/real_screen_system.jpg" width="420" alt="Trang Thông tin"> |
+
+</div>
+
+---
+
+### 🔤 Bảng mẫu 50 ký tự tiếng Việt đã được tinh chỉnh
+![Bảng mẫu 50 ký tự tiếng Việt](preview.png)
 
 ---
 
