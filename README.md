@@ -2,6 +2,12 @@
 
 <div align="center">
 
+<a href="https://hawklabs.vn">
+  <img src="images/hawklabs_logo.png" width="140" alt="HA.WK LABS">
+</a>
+
+<p><strong>HA.WK LABS</strong> • <em>Hardware & Adaptive Works</em></p>
+
 [![Klipper](https://img.shields.io/badge/Klipper-Qidi%20Plus%205-blue.svg)](https://github.com/Klipper3d/klipper)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Tested On](https://img.shields.io/badge/Tested%20on-Qidi%20Plus%205%20(Bản%20Nội%20Địa)-orange.svg)](https://qidi3d.com)
@@ -92,3 +98,10 @@ bash /home/qidi/uninstall_vietnamese.sh
 * **Khử răng cưa 4-bpp**: Render 16 mức sắc độ xám mịn màng, triệt tiêu hoàn toàn hiện tượng vỡ hạt, răng cưa hay méo dấu của các bản mod thủ công trước đây.
 * **Căn chỉnh quang học hoàn hảo**: Khoảng cách dấu thanh phía trên và dấu nặng phía dưới được tinh chỉnh tỉ mỉ theo chuẩn Typography, không bị dính sát vào thân chữ cũng không bị trôi nổi quá xa.
 * **An toàn tuyệt đối**: Tự động tạo bản sao lưu `qidiclient.original` trước khi can thiệp.
+
+---
+
+## 📜 Bản quyền & Tác giả (Credits & License)
+
+- Phát hành theo giấy phép [MIT License](LICENSE) — Miễn phí & Mã nguồn mở cho cộng đồng 3D Printing.
+- **Tác giả & Đơn vị phát triển**: **TÔN NGỘ ĐỘC** ([HA.WK LABS](https://hawklabs.vn) — *Hardware & Adaptive Works*).
