@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # ==============================================================================
-# QIDI Plus 4 / Plus 5 / Q1 Pro - Gói Cài Đặt Tiếng Việt (Font Ubuntu Mono)
+# QIDI Plus 5 - Gói Cài Đặt Tiếng Việt (Font Ubuntu Mono Typography)
 # ==============================================================================
 
 set -e
@@ -12,16 +12,30 @@ RED='\033[0;31m'
 NC='\033[0m'
 
 echo -e "${CYAN}======================================================${NC}"
-echo -e "${GREEN}   CÀI ĐẶT FONT TIẾNG VIỆT UBUNTU MONO CHO MÁY IN QIDI ${NC}"
+echo -e "${GREEN}   CÀI ĐẶT FONT TIẾNG VIỆT CHO MÁY IN QIDI PLUS 5     ${NC}"
 echo -e "${CYAN}======================================================${NC}"
 
 TARGET_BIN="/home/qidi/QIDI_Client/bin/qidiclient"
+BACKUP_BIN="/home/qidi/QIDI_Client/bin/qidiclient.original"
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-# 1. Kiểm tra môi trường
+# 1. Kiểm tra môi trường & Tương thích phần cứng
 if [ ! -f "$TARGET_BIN" ]; then
     echo -e "${RED}[!] Không tìm thấy tệp $TARGET_BIN trên hệ thống!${NC}"
-    echo -e "${RED}[!] Vui lòng đảm bảo bạn đang chạy script này trên máy in QIDI.${NC}"
+    echo -e "${RED}[!] Vui lòng đảm bảo bạn đang chạy script này trên máy in QIDI Plus 5.${NC}"
+    exit 1
+fi
+
+CHECK_BIN="$TARGET_BIN"
+if [ -f "$BACKUP_BIN" ]; then
+    CHECK_BIN="$BACKUP_BIN"
+fi
+
+BIN_SIZE=$(stat -c%s "$CHECK_BIN" 2>/dev/null || echo 0)
+if [ "$BIN_SIZE" != "90312400" ]; then
+    echo -e "${RED}[!] CẢNH BÁO TƯƠNG THÍCH: Kích thước file ($BIN_SIZE bytes) không khớp với QIDI Plus 5 (90312400 bytes)!${NC}"
+    echo -e "${RED}[!] Bản vá nhị phân này chỉ dành riêng cho dòng máy QIDI Plus 5.${NC}"
+    echo -e "${RED}[!] Hủy bỏ cài đặt ngay lập tức để chống đen màn hình.${NC}"
     exit 1
 fi
 
@@ -69,7 +83,8 @@ echo qiditech | sudo -S systemctl start qidi-client
 
 echo -e "${GREEN}======================================================${NC}"
 echo -e "${GREEN}   CÀI ĐẶT THÀNH CÔNG! MÀN HÌNH ĐÃ SẴN SÀNG TIẾNG VIỆT ${NC}"
+echo -e "${CYAN}   - Thiết bị: QIDI Plus 5${NC}"
 echo -e "${CYAN}   - Font chữ: Ubuntu Mono Typography (Khử răng cưa 4-bpp)${NC}"
-echo -e "${CYAN}   - Bản sao lưu gốc an toàn: $TARGET_BIN.original${NC}"
-echo -e "${CYAN}   - Nếu muốn khôi phục lại gốc: chạy ./uninstall.sh hoặc bash /home/qidi/uninstall_vietnamese.sh${NC}"
+echo -e "${CYAN}   - Bản sao lưu gốc an toàn: $BACKUP_BIN${NC}"
+echo -e "${CYAN}   - Khôi phục gốc bất cứ lúc nào: bash /home/qidi/uninstall_vietnamese.sh${NC}"
 echo -e "${GREEN}======================================================${NC}"

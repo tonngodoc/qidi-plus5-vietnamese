@@ -1,8 +1,12 @@
-# Gói Cài Đặt Tiếng Việt & Font Ubuntu Mono Cho Máy In QIDI (Plus 4 / Plus 5 / Q1 Pro)
+# Gói Cài Đặt Tiếng Việt & Font Ubuntu Mono Cho Máy In QIDI Plus 5
 
 Gói nâng cấp giao diện màn hình cảm ứng QIDI Client với bộ font **Ubuntu Mono Typography** khử răng cưa mượt mà, hiển thị chuẩn xác 100% các ký tự và dấu thanh tiếng Việt (`ă, â, đ, ê, ô, ơ, ư` và đầy đủ các dấu `sắc, huyền, hỏi, ngã, nặng`).
 
 ![Bảng mẫu 50 ký tự tiếng Việt](preview.png)
+
+> [!IMPORTANT]
+> **Khả năng tương thích:** Bản vá nhị phân này được xây dựng và kiểm thử thực tế độc quyền trên máy in **QIDI Plus 5** (Kích thước file `qidiclient`: `90,312,400 bytes`, MD5: `dfe9db00a13e40cf08d8a376d09a9aca`).
+> Tuyệt đối **không tự ý cài đặt chéo** sang các dòng máy khác (như Q1 Pro, Plus 4, X-Max 3...) vì địa chỉ offset bộ nhớ của mỗi bản firmware được biên dịch khác nhau. Trình cài đặt đã tích hợp cơ chế tự kiểm tra chữ ký an toàn (Safety Pre-check) và sẽ tự động từ chối can thiệp nếu không khớp đúng phiên bản của QIDI Plus 5.
 
 ---
 
@@ -21,13 +25,13 @@ Sau khi đăng nhập thành công, chỉ cần copy và dán duy nhất 1 dòng
 curl -sSL https://raw.githubusercontent.com/tonngodoc/qidi-plus5-vietnamese/main/install.sh | bash
 ```
 
-*(Script sẽ tự động sao lưu bản gốc, nạp 190 ký tự font Ubuntu Mono siêu nét và khởi động lại màn hình trong 3 giây).*
+*(Script sẽ tự động sao lưu bản gốc sang `qidiclient.original`, kiểm tra chữ ký an toàn, nạp 190 ký tự font Ubuntu Mono siêu nét và khởi động lại màn hình trong 3 giây).*
 
 ---
 
 ## 📦 Cách 2: Cài đặt thủ công (Không cần mạng internet)
 
-1. Tải file [`qidi_vietnamese_ubuntu_mono.zip`](qidi_vietnamese_ubuntu_mono.zip) (dung lượng chỉ **12 KB**) về máy tính và giải nén.
+1. Tải file [`qidi_vietnamese_ubuntu_mono.zip`](qidi_vietnamese_ubuntu_mono.zip) (dung lượng chỉ **27 KB**) về máy tính và giải nén.
 2. Dùng phần mềm **WinSCP** hoặc **FileZilla** kết nối vào máy in với IP của máy in:
    - **User**: `qidi`
    - **Password**: `qiditech`
@@ -35,7 +39,7 @@ curl -sSL https://raw.githubusercontent.com/tonngodoc/qidi-plus5-vietnamese/main
 3. Kéo thả thư mục vừa giải nén vào thư mục `/home/qidi/`.
 4. Mở SSH vào máy in và chạy lệnh:
    ```bash
-   cd /home/qidi/vietnamese
+   cd /home/qidi/qidi-vietnamese
    bash install.sh
    ```
 
@@ -46,13 +50,13 @@ curl -sSL https://raw.githubusercontent.com/tonngodoc/qidi-plus5-vietnamese/main
 Nếu muốn quay trở lại font chữ và cài đặt mặc định ban đầu của nhà sản xuất bất cứ lúc nào, chỉ cần chạy:
 
 ```bash
-cd /home/qidi/vietnamese && bash uninstall.sh
+bash /home/qidi/uninstall_vietnamese.sh
 ```
-*(hoặc nếu cài qua lệnh curl: `bash /home/qidi/uninstall_vietnamese.sh`)*
 
 ---
 
 ## ✨ Điểm ưu việt kỹ thuật
+* **Bảo vệ phần cứng tuyệt đối (Safety Pre-check)**: Kiểm tra mã băm và kích thước tệp thực thi trước khi ghi, chống hỏng hóc hoặc đen màn hình nếu chạy sai máy.
 * **Không làm nặng máy**: Bản vá nhị phân siêu nhẹ chỉ **36 KB** (không can thiệp vào mã logic in, không gây giật lag Klipper).
 * **Khử răng cưa 4-bpp**: Render 16 mức sắc độ xám mịn màng, triệt tiêu hoàn toàn hiện tượng vỡ hạt, răng cưa hay méo dấu của các bản mod thủ công trước đây.
 * **Căn chỉnh quang học hoàn hảo**: Khoảng cách dấu thanh phía trên và dấu nặng phía dưới được tinh chỉnh tỉ mỉ theo chuẩn Typography, không bị dính sát vào thân chữ cũng không bị trôi nổi quá xa.
