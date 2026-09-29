@@ -1,5 +1,14 @@
 # Gói Cài Đặt Tiếng Việt & Font Ubuntu Mono Cho Máy In QIDI Plus 5
 
+<div align="center">
+
+[![Klipper](https://img.shields.io/badge/Klipper-Qidi%20Plus%205-blue.svg)](https://github.com/Klipper3d/klipper)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Tested On](https://img.shields.io/badge/Tested%20on-Qidi%20Plus%205%20(RK3308)-orange.svg)](https://qidi3d.com)
+[![Installs](https://img.shields.io/badge/dynamic/json?color=brightgreen&label=Installs&query=value&url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Ftonngodoc-qidi-plus5-vietnamese%2Finstalls&cacheSeconds=60)](https://github.com/tonngodoc/qidi-plus5-vietnamese)
+
+</div>
+
 Gói nâng cấp giao diện màn hình cảm ứng QIDI Client với bộ font **Ubuntu Mono Typography** khử răng cưa mượt mà, hiển thị chuẩn xác 100% các ký tự và dấu thanh tiếng Việt (`ă, â, đ, ê, ô, ơ, ư` và đầy đủ các dấu `sắc, huyền, hỏi, ngã, nặng`).
 
 ![Bảng mẫu 50 ký tự tiếng Việt](preview.png)

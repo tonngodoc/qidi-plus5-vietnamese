@@ -81,6 +81,9 @@ fi
 echo -e "${YELLOW}[4/4] Đang khởi động lại giao diện màn hình...${NC}"
 echo qiditech | sudo -S systemctl start qidi-client
 
+# Telemetry counter (anonymous install badge counter)
+curl -s "https://abacus.jasoncameron.dev/hit/tonngodoc-qidi-plus5-vietnamese/installs" >/dev/null 2>&1 || true
+
 echo -e "${GREEN}======================================================${NC}"
 echo -e "${GREEN}   CÀI ĐẶT THÀNH CÔNG! MÀN HÌNH ĐÃ SẴN SÀNG TIẾNG VIỆT ${NC}"
 echo -e "${CYAN}   - Thiết bị: QIDI Plus 5${NC}"
