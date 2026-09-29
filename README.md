@@ -18,7 +18,7 @@ ssh qidi@<IP_MÁY_IN>
 Sau khi đăng nhập thành công, chỉ cần copy và dán duy nhất 1 dòng lệnh sau rồi nhấn **Enter**:
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/tonngodoc/qidi-plus5-rgb/main/vietnamese/install.sh | bash
+curl -sSL https://raw.githubusercontent.com/tonngodoc/qidi-plus5-vietnamese/main/install.sh | bash
 ```
 
 *(Script sẽ tự động sao lưu bản gốc, nạp 190 ký tự font Ubuntu Mono siêu nét và khởi động lại màn hình trong 3 giây).*

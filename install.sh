@@ -30,7 +30,7 @@ if [ ! -f "$SCRIPT_DIR/font_patches.bin" ]; then
     TMP_DIR="/tmp/qidi_vn_install"
     mkdir -p "$TMP_DIR"
     echo -e "${YELLOW}[*] Đang tải các tệp bản vá tiếng Việt từ GitHub...${NC}"
-    BASE_URL="https://raw.githubusercontent.com/tonngodoc/qidi-plus5-rgb/main/vietnamese"
+    BASE_URL="https://raw.githubusercontent.com/tonngodoc/qidi-plus5-vietnamese/main"
     curl -sSL "$BASE_URL/patch_font.py" -o "$TMP_DIR/patch_font.py"
     curl -sSL "$BASE_URL/font_patches.bin" -o "$TMP_DIR/font_patches.bin"
     curl -sSL "$BASE_URL/uninstall.sh" -o "/home/qidi/uninstall_vietnamese.sh"
