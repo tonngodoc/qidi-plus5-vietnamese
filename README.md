@@ -1,4 +1,4 @@
-# Gói Cài Đặt Tiếng Việt & Font Ubuntu Mono Cho Máy In QIDI Plus 5 (Bản Nội Địa)
+# Gói Cài Đặt Tiếng Việt Toàn Diện & Font Ubuntu Mono Cho Máy In QIDI Plus 5 (Bản Nội Địa)
 
 <div align="center">
 
@@ -15,14 +15,14 @@
 
 </div>
 
-Gói nâng cấp giao diện màn hình cảm ứng QIDI Client với bộ font **Ubuntu Mono Typography** khử răng cưa mượt mà, hiển thị chuẩn xác 100% các ký tự và dấu thanh tiếng Việt (`ă, â, đ, ê, ô, ơ, ư` và đầy đủ các dấu `sắc, huyền, hỏi, ngã, nặng`).
+Gói nâng cấp giao diện màn hình cảm ứng QIDI Client **Việt hóa toàn diện 100%** (toàn bộ menu điều khiển, cài đặt, và **100% các hộp thoại thông báo lỗi, cảnh báo sự cố in**) kết hợp với bộ font **Ubuntu Mono Typography** khử răng cưa mượt mà, hiển thị chuẩn xác từng dấu thanh tiếng Việt (`ă, â, đ, ê, ô, ơ, ư` và đầy đủ các dấu `sắc, huyền, hỏi, ngã, nặng`).
 
 > [!IMPORTANT]
 > **Khả năng tương thích:**
 > - **Dành cho:** Máy in **QIDI Plus 5 - Bản Nội địa** (Chưa thử nghiệm với bản Quốc tế).
 > - **Firmware đã kiểm thử thực tế:** `01.01.01.07` (Kích thước file `qidiclient`: `90,312,400 bytes`, MD5: `dfe9db00a13e40cf08d8a376d09a9aca`).
 > - **Cơ chế bảo vệ an toàn (Safety Pre-check):** Trình cài đặt tự động kiểm tra chữ ký nhị phân và kích thước file trước khi nạp. Nếu phát hiện sai dòng máy (Q1 Pro, Plus 4...) hoặc phiên bản firmware không khớp, script sẽ **tự động từ chối cài đặt** để bảo vệ màn hình an toàn tuyệt đối.
-> - **Cơ chế ngôn ngữ:** Bản vá thay thế trực tiếp vào slot ngôn ngữ Tiếng Nga (`ru_RU`) của nhà sản xuất thành **Tiếng Việt**. Các ngôn ngữ phổ biến khác (Tiếng Anh, Tiếng Trung...) vẫn được giữ nguyên vẹn 100% và có thể chuyển đổi qua lại bình thường trong menu Cài đặt.
+> - **Cơ chế ngôn ngữ:** Bản vá thay thế trực tiếp vào slot ngôn ngữ Tiếng Nga (`ru_RU`) của nhà sản xuất thành **Tiếng Việt 100%** (bao gồm 488 chuỗi giao diện & thông báo lỗi). Các ngôn ngữ phổ biến khác (Tiếng Anh, Tiếng Trung...) vẫn được giữ nguyên vẹn 100% và có thể chuyển đổi qua lại bình thường trong menu Cài đặt.
 
 ---
 
@@ -94,7 +94,8 @@ bash /home/qidi/uninstall_vietnamese.sh
 
 ## ✨ Điểm ưu việt kỹ thuật
 * **Bảo vệ phần cứng tuyệt đối (Safety Pre-check)**: Kiểm tra mã băm và kích thước tệp thực thi trước khi ghi, chống hỏng hóc hoặc đen màn hình nếu chạy sai máy.
-* **Không làm nặng máy**: Bản vá nhị phân siêu nhẹ chỉ **36 KB** (không can thiệp vào mã logic in, không gây giật lag Klipper).
+* **Việt hóa 100% không sót**: Dịch sạch toàn bộ bảng ngôn ngữ tiếng Nga sang tiếng Việt, bao gồm 100% các thông báo lỗi (lỗi slice file, cảnh báo kẹt nhựa, phát hiện sợi spaghetti, bù rung cộng hưởng, nhật ký lỗi, thông báo cảm biến nhiệt, mesh bàn, kết nối BOX...).
+* **Không làm nặng máy**: Bản vá nhị phân siêu nhẹ chỉ **76 KB** (không can thiệp vào mã logic in, không gây giật lag Klipper).
 * **Khử răng cưa 4-bpp**: Render 16 mức sắc độ xám mịn màng, triệt tiêu hoàn toàn hiện tượng vỡ hạt, răng cưa hay méo dấu của các bản mod thủ công trước đây.
 * **Căn chỉnh quang học hoàn hảo**: Khoảng cách dấu thanh phía trên và dấu nặng phía dưới được tinh chỉnh tỉ mỉ theo chuẩn Typography, không bị dính sát vào thân chữ cũng không bị trôi nổi quá xa.
 * **An toàn tuyệt đối**: Tự động tạo bản sao lưu `qidiclient.original` trước khi can thiệp.

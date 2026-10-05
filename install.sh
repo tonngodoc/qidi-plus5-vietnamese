@@ -58,7 +58,7 @@ echo -e "${YELLOW}[1/4] Đang tạm dừng dịch vụ giao diện màn hình (q
 echo qiditech | sudo -S systemctl stop qidi-client 2>/dev/null || true
 sleep 1
 
-echo -e "${YELLOW}[2/4] Đang áp dụng bản vá 190 ký tự font Ubuntu Mono sắc nét...${NC}"
+echo -e "${YELLOW}[2/4] Đang áp dụng bản vá font Ubuntu Mono & Việt hóa 100% giao diện, thông báo lỗi...${NC}"
 python3 "$SCRIPT_DIR/patch_font.py"
 
 echo -e "${YELLOW}[3/4] Đang thiết lập cấu hình ngôn ngữ Tiếng Việt...${NC}"
@@ -89,6 +89,7 @@ curl -s "https://abacus.jasoncameron.dev/hit/tonngodoc-qidi-plus5-vietnamese/ins
 echo -e "${GREEN}======================================================${NC}"
 echo -e "${GREEN}   CÀI ĐẶT THÀNH CÔNG! MÀN HÌNH ĐÃ SẴN SÀNG TIẾNG VIỆT ${NC}"
 echo -e "${CYAN}   - Thiết bị: QIDI Plus 5 (Bản Nội địa)${NC}"
+echo -e "${CYAN}   - Ngôn ngữ: Tiếng Việt 100% (Menu, Cài đặt, Toàn bộ Thông báo lỗi & Cảnh báo)${NC}"
 echo -e "${CYAN}   - Font chữ: Ubuntu Mono Typography (Khử răng cưa 4-bpp)${NC}"
 echo -e "${CYAN}   - Tác giả: TÔN NGỘ ĐỘC | https://hawklabs.vn${NC}"
 echo -e "${CYAN}   - Bản sao lưu gốc an toàn: $BACKUP_BIN${NC}"

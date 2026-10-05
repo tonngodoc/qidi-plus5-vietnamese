@@ -1,14 +1,16 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-QIDI Plus 5 Ubuntu Mono Vietnamese Font Patcher
-Applies 190 anti-aliased typographic glyphs safely via atomic replace with strict hardware compatibility checks.
+QIDI Plus 5 Full Vietnamese Localization & Ubuntu Mono Typography Patcher
+Applies full Vietnamese localization (100% UI strings + error messages) and 190 anti-aliased typographic glyphs safely via atomic replace with strict hardware compatibility checks.
 """
 import sys
 import os
 import struct
 import shutil
 import hashlib
+
+sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 TARGET_BIN = "/home/qidi/QIDI_Client/bin/qidiclient"
 BACKUP_BIN = "/home/qidi/QIDI_Client/bin/qidiclient.original"
@@ -48,7 +50,8 @@ def main():
     with open(source_bin, "rb") as f:
         f.seek(MAGIC_STRING_OFF)
         sig = f.read(19)
-        if not (sig.startswith(b"Qu\xe1\xba\xa1t th\xc3\xb4ng gi\xc3\xb3") or sig.startswith(b"Qu\xe1\xba\xa1t\x00")):
+        # Hỗ trợ cả file nguyên bản nhà máy (Система...) lẫn file đã vá trước đó (Quạt...)
+        if not (sig.startswith(b"Qu\xe1\xba\xa1t") or sig.startswith(b"\xd0\xa1\xd0\xb8\xd1\x81\xd1\x82\xd0\xb5\xd0\xbc\xd0\xb0")):
             print("[!] CẢNH BÁO TƯƠNG THÍCH: Chữ ký nhị phân tại offset 0x541c490 không khớp!")
             print("[!] Bản vá nhị phân không tương thích với firmware máy này. Hủy bỏ an toàn.")
             sys.exit(1)
@@ -65,7 +68,7 @@ def main():
     shutil.copyfile(BACKUP_BIN, TMP_BIN)
 
     # 4. Apply patches to TMP_BIN
-    print(f"[*] Đang nạp bản vá font Ubuntu Mono Tiếng Việt (190 ký tự)...")
+    print(f"[*] Đang nạp bản vá Tiếng Việt toàn diện (190 glyphs font Ubuntu Mono + 100% dịch giao diện & lỗi)...")
     with open(PATCH_DATA, "rb") as pf:
         num_records = struct.unpack("<I", pf.read(4))[0]
         print(f"[*] Tổng số phân đoạn vá: {num_records}")
@@ -82,7 +85,7 @@ def main():
     # 5. Atomic replace
     shutil.move(TMP_BIN, TARGET_BIN)
     os.chmod(TARGET_BIN, 0o755)
-    print(f"[THÀNH CÔNG] Đã vá thành công {num_records} mục font vào {TARGET_BIN}!")
+    print(f"[THÀNH CÔNG] Đã vá thành công {num_records} mục (190 glyphs + 488 chuỗi dịch) vào {TARGET_BIN}!")
 
 if __name__ == "__main__":
     main()
